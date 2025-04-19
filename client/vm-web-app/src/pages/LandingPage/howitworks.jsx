@@ -1,7 +1,4 @@
-import videopng from '../../assets/images/27 Video Files.png'
-import checkmark from '../../assets/images/Checkmark.png'
-import write from '../../assets/images/Layer_2.png'
-import checklist from '../../assets/images/Vector.png'
+import React from 'react'
 
 export default function Howitworks() {
   return(<>

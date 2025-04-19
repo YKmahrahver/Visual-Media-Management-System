@@ -1,5 +1,4 @@
 import React from 'react'
-import { useState } from 'react'
 import './landingpage.css'
 import Navbar_LP from './navbar_LP.jsx'
 import folderimg from '../../assets/image 1.png'
@@ -35,7 +34,6 @@ export default function LandingPage() {
     )
   }
   return(<>
-    <Navbar_LP />
     <LandingPageContent />
   </>)
 }
