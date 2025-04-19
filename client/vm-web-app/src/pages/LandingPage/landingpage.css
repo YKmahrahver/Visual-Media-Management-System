@@ -1,0 +1,62 @@
+body{
+  background-color: #313131;
+  font-family: Arial, sans-serif;
+  color: white;
+  font: italic;
+}
+
+.landingpage-content{
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  text-align: start;
+  margin-left: 100px;
+  margin-right: 4px;
+  margin-top: 15px;
+}
+
+.landingpage-content h1{
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.landingpage-content p{
+  font-weight: lighter;
+  font-size: 15px;
+}
+
+.getStartedButton{
+  font-size: 20px;
+  padding: 10px 20px;
+  background: #c31432;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #240b36, #c31432);  
+  background: linear-gradient(to right, #240b36, #c31432); 
+  border: none;
+  border-radius: 5px;
+  color: white;
+  margin-top: 20px;
+}
+
+.getStartedButton:hover{
+  background: #c31432;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #240b36, #fcf4f6);  
+  background: linear-gradient(to right, #240b36, #c31432); 
+  cursor: pointer;
+}
+.getStartedButton:active{
+  background: #c31432;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #983fd7, #ff859b);  
+  background: linear-gradient(to right, #8f2ed4, #f23454); 
+  cursor: pointer;
+}
+
+.landingpage-container{
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: row;
+  margin-top: 10px;
+  margin-right: 100px;
+}
