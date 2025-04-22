@@ -13,6 +13,8 @@
   justify-items: center; /* center each item horizontally */
   align-items: center;    /* center each item vertically */
   padding: 20px;
+  margin-right: 50px;
+  margin-left: 50px;
 }
 
 .steps-container img{
