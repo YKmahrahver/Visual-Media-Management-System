@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Navbar_LP from './navbar_LP.jsx';
 import './FAQ.css';
 
 const FAQ = () => {
@@ -22,7 +22,7 @@ const FAQ = () => {
     },
     {
       question: 'What kind of stats or summaries are available?',
-      answer: 'GeekShelf offers visual reports such as genre distribution, top-rated media, and income/expense comparison if integrated with budget features.'
+      answer: 'GeekShelf offers visual reports such as genre distribution, top-rated media, and other future advanced features.'
     },
     {
       question: 'Do you support all media types? movies and TV series?',
@@ -30,7 +30,8 @@ const FAQ = () => {
     },
   ];
 
-  return (
+  return (<>
+    <Navbar_LP />
     <div className="faq-container">
       <h1 className="faq-title">? Frequently Asked Questions (FAQ)</h1>
       <div className="faq-list">
@@ -42,7 +43,7 @@ const FAQ = () => {
         ))}
       </div>
     </div>
-  );
+    </>);
 };
 
 export default FAQ;

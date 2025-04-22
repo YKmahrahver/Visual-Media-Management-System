@@ -1,4 +1,5 @@
 import React from 'react'
+import Navbar_LP from './navbar_LP.jsx';
 import logo1 from '../../assets/Checkmark.png'
 import logo2 from '../../assets/27 Video Files.png'
 import logo3 from '../../assets/Layer_2.png'
@@ -7,6 +8,7 @@ import './howitworks.css';
 
 export default function Howitworks() {
   return(<>
+    <Navbar_LP />
     <div>
       <div className='howitworks-container'>
         <h1 style={{fontSize: '60px'}}>How GeekShelf works</h1>
