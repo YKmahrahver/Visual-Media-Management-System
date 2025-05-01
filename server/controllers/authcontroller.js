@@ -8,10 +8,10 @@ export const register = async (req, res) => {
   try {
     // Check if the user already exists
     const [existing] = await db.query('SELECT * FROM userdata WHERE email = ?', [email]);
-    console.log("Existing user:", existing); // Debugging log
+    console.log("Existing user:", existing); // prints the existing user data
     
     if (existing.length > 0) {
-      return res.status(400).json({ message: 'Email already Registered' });
+      return res.status(400).json({ message: '⚠ Email already Registered' });
     }
 
     // Hash the password
@@ -30,3 +30,32 @@ export const register = async (req, res) => {
     res.status(500).json({ message: 'Internal server error' });
   }
 };
+
+export const login = async (req, res) => {
+  const {email, password} = req.body;
+  console.log("Login attempt with email:", email); // Debugging log
+  try{
+    // Check if the user exists
+    const [user] = await db.query('SELECT * FROM userdata WHERE email = ?', [email]);
+    console.log("User found:", user); // prints the user data
+    
+    if (user.length === 0) {
+      return res.status(400).json({ message: ' ⚠ Invalid email or password!' });
+    }
+
+    // Compare the password with the hashed password in the database
+    const isMatch = await bcrypt.compare(password, user[0].password);
+    console.log("Password match:", isMatch); // Debugging log
+
+    if (!isMatch) {
+      return res.status(400).json({ message: '⚠ Invalid email or password!' });
+    }
+
+    res.status(200).json({ message: 'Login successful' });
+  }
+  catch(error){
+    console.error("Error during login:", error); // More specific error logging
+    res.status(500).json({ message: 'Internal server error' });
+  }
+
+}

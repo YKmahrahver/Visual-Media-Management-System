@@ -10,6 +10,7 @@ app.use(express.json());
 app.use(cookieParser());;
 
 app.use('/api/auth', authRoutes);
+app.use('/api/login', authRoutes);
 
 db.query("SELECT 1") // Test the database connection
   .then(() => {

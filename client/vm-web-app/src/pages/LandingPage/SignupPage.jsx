@@ -18,7 +18,7 @@ export default function SignupPage() {
     setError("");
 
     try {
-      // Send POST request to the backend with form data
+      // Send POST request to the backend with json data
       const response = await axios.post('http://localhost:8081/api/auth/signup', {
         username: values.username,
         email: values.email,
@@ -40,6 +40,7 @@ export default function SignupPage() {
 
   return (
     <div className="auth-container">
+      {error && <p className="error-message">{error}</p>}
       <p>Join GeekShelf now!</p>
       <h2 style={{ color: 'white' }}>Sign Up</h2>
       <form onSubmit={handleSubmit}>
@@ -69,7 +70,7 @@ export default function SignupPage() {
       </form>
 
       {/* Display any error message */}
-      {error && <p className="error-message">{error}</p>}
+      
 
       <p>Already have an account? <a style={{ color: 'blueviolet' }} href="/login">Log in</a></p>
     </div>
