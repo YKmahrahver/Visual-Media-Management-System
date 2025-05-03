@@ -1,0 +1,58 @@
+/* Main page wrapper */
+.main-page {
+  display: flex;
+  height: 100vh;
+  position: relative;
+}
+
+/* Logo OUTSIDE the sidebar */
+.navbar_LP_logo {
+  position: absolute; /* Freely position anywhere */
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  z-index: 10; /* Make sure it appears above */
+}
+
+/* Logo image */
+.logopng {
+  width: 55px;
+  height: auto;
+  max-width: 100%;
+}
+
+/* Sidebar / nav bar */
+.nav-bar-container {
+  background: #c31432;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+  width: 250px;
+  padding-top: 100px; /* Give space below the logo */
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Sidebar links */
+.navbar_links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Main content area */
+.main-content {
+  flex: 1;
+  padding: 40px;
+  margin-left: 10px; /* Make space for sidebar */
+}

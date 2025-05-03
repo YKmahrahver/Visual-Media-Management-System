@@ -25,7 +25,7 @@ export default function LoginPage() {
 
       // Optionally redirect to login after successful signup
       window.location.href = '/main';
-
+      
     } catch (error) {
       // Handle any errors, such as email already taken
       console.error("Login Failed:", error.response?.data?.message);

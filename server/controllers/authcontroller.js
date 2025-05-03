@@ -3,7 +3,7 @@ import bcrypt from 'bcrypt';
 
 export const register = async (req, res) => {
   const { username, email, password } = req.body;
-  console.log("Received data:", req.body); // Debugging log
+  console.log("Received data:", req.body); // print to check if data is received correctly
 
   try {
     // Check if the user already exists
