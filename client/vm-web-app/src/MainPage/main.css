@@ -5,54 +5,152 @@
   position: relative;
 }
 
-/* Logo OUTSIDE the sidebar */
-.navbar_LP_logo {
-  position: absolute; /* Freely position anywhere */
+/* ==============================
+   LOGO STYLES (OUTSIDE SIDEBAR)
+   ============================== */
+
+/* Logo outside the sidebar */
+.navbar_MP_logo {
+  position: absolute; /* Position freely outside the sidebar */
   top: 20px;
   left: 20px;
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bold;
-  z-index: 10; /* Make sure it appears above */
+  z-index: 10; /* Ensure it appears above other content */
 }
 
-/* Logo image */
+/* Logo image outside the sidebar */
 .logopng {
-  width: 55px;
+  width: 50px;
   height: auto;
   max-width: 100%;
 }
+.logopng2{
+  width: 115px;
+  height: auto;
+  max-width: 100%;
+  border-radius: 50%;
+}
 
-/* Sidebar / nav bar */
+/* ==============================
+   SIDEBAR STYLES
+   ============================== */
+
+/* Sidebar container */
 .nav-bar-container {
-  background: #c31432;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
-
+  position: fixed; /* Fixed position to stay in view */
+  top: 0;
+  left: 0;
+  background: #0F2027; /* Background gradient */
+  background: -webkit-linear-gradient(to left, #2C5364, #203A43, #0F2027); /* For older browsers */
+  background: linear-gradient(to left, #2C5364, #203A43, #0F2027); /* Main gradient */
   width: 250px;
-  padding-top: 100px; /* Give space below the logo */
+  height: 100vh; /* Full height */
+  padding-top: 75px; /* Space for the logo */
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 20px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px; /* Space between the sidebar items */
 }
 
-/* Sidebar links */
+.navbar_MP_user_container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; /* Space between user icon and text */
+  color: white; /* Text color for user info */
+  margin-bottom: 15px;
+}
+.navbar_MP_username{
+  font-weight: bolder; /* Bold text */
+  color: white; /* Text color for username */
+}
+
+/* ==============================
+   SIDEBAR LINKS STYLES
+   ============================== */
+
+/* Sidebar links container */
 .navbar_links {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
+  color: white; /* Text color for links */
 }
 
-/* Main content area */
+/* Individual sidebar link style */
+.navbar_links a {
+  color: white; /* Link color */
+  text-decoration: none; /* Remove underline */
+  font-size: 15px; /* Font size */
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease; /* Smooth background transition */
+  white-space: nowrap; /* Prevent text wrapping */
+  box-sizing: border-box; /* Ensure padding doesn't affect the element size */
+}
+
+/* ==============================
+   MAIN CONTENT AREA STYLES
+   ============================== */
+
+/* Main content area where sidebar is absent */
 .main-content {
   flex: 1;
   padding: 40px;
-  margin-left: 10px; /* Make space for sidebar */
+  margin-left: 300px; /* Space for the sidebar */
+}
+
+/* ==============================
+   MAIN PAGE LOGO STYLES
+   ============================== */
+
+/* Main page logos (items in the navbar) */
+.mainpagelogos {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px; /* Font size for logo items */
+  font-weight: 500; /* Font weight */
+  z-index: 10; /* Ensure it stays above */
+  margin-left: 30px;
+  transition: all 0.3s ease;
+  white-space: nowrap; /* Prevent text wrapping */
+  box-sizing: border-box; /* Ensure padding doesn't affect the element size */
+}
+
+/* Hover effect for main logos */
+.mainpagelogos:hover {
+  color: #0F2027;
+  text-decoration: none;
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+/* Active effect for main logos */
+.mainpagelogos.active {
+  color: #0b181f;
+}
+
+/* ==============================
+   LOGO IMAGE STYLES (INSIDE AND OUTSIDE SIDEBAR)
+   ============================== */
+
+/* Logo image inside the navbar (for smaller logos) */
+.logopng {
+  width: 35px;
+  height: auto;
+  max-width: 100%;
+  margin-right: 10px;
+}
+
+/* Logo image outside the navbar (larger logo) */
+.logopng1 {
+  width: 40px;
+  height: auto;
+  max-width: 100%;
 }
